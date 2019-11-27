@@ -1,21 +1,48 @@
 <html>
-  <head>
-    <title>My Bio</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <table width="800">
-      <tr>
-        <td>
-          2018 World Congress on Computational Intelligence
-          <ul type="circle">
-            <li>Rio de Janeiro &#8729; Barra da Tijuca</li>
-          </ul>
-        </td>
-        <td>
-          <img src="IMG_20180715_162413.jpg" title="WCCI2018" width="400" />
-        </td>
-      </tr>
-    </table>
-  </body>
+	<head>
+		<title>My Bio</title>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<table width="800">
+			<tr>
+				<td>
+					2018 World Congress on Computational Intelligence
+					<ul type="circle">
+						<li>Rio de Janeiro &#8729; Windsor Oceanico</li>
+						<li>Barra da Tijuca</li>
+						<li>Sugar Loaf</li>
+						<li>Corcovado</li>
+						<li>Escadaria Selaron</li>
+					</ul>
+				</td>
+				<td>
+					<!--
+					<img src="wcci2018_1.jpg" id="WCCI2018" title="WCCI2018" width="400" />
+					-->
+					<script>
+						var img_idx=1;
+						var img_src="wcci2018_"+img_idx+".jpg";
+						document.write("<img src="+img_src+" id=\"WCCI2018\" title=\"WCCI2018\" width=\"400\" />");
+						
+						function next(){
+							//img_idx=parseInt(document.getElementById("WCCI2018").id);
+							if (img_idx<10)
+								img_idx++;
+							img_src="wcci2018_"+img_idx+".jpg";
+							document.getElementById("WCCI2018").src=img_src;
+						}
+						function pre(){
+							if (img_idx>1)
+								img_idx--;
+							img_src="wcci2018_"+img_idx+".jpg";
+							document.getElementById("WCCI2018").src=img_src;
+						}
+					</script>
+					<button onClick="pre()">&lt</button>
+					<button onClick="next()">&gt</button>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
