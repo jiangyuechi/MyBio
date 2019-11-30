@@ -4,46 +4,99 @@
 	</head>
 	<body>
 		<h1>Hello World</h1>
-		<table width="800">
+		<table>
 			<tr>
+				<td>Year</td>
 				<td>
-					2018 World Congress on Computational Intelligence
-					<ul type="circle">
-						<li>Rio de Janeiro &#8729; Windsor Oceanico</li>
-						<li>Barra da Tijuca</li>
-						<li>Sugar Loaf</li>
-						<li>Corcovado</li>
-						<li>Escadaria Selaron</li>
-					</ul>
+					<select name="year" id="select_year">
+						<option value="2018" selected>2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+					</select>
 				</td>
 				<td>
-					<!--
-					<img src="wcci2018_1.jpg" id="WCCI2018" title="WCCI2018" width="400" />
-					-->
-					<script>
-						var img_idx=1;
-						var img_src="wcci2018_"+img_idx+".jpg";
-						document.write("<img src="+img_src+" id=\"WCCI2018\" title=\"WCCI2018\" width=\"400\" />");
-						
-						function next(){
-							//img_idx=parseInt(document.getElementById("WCCI2018").id);
-							if (img_idx<5)
-								img_idx++;
-							img_src="wcci2018_"+img_idx+".jpg";
-							document.getElementById("WCCI2018").src=img_src;
-						}
-						function pre(){
-							if (img_idx>1)
-								img_idx--;
-							img_src="wcci2018_"+img_idx+".jpg";
-							document.getElementById("WCCI2018").src=img_src;
-						}
-					</script>
-					<br />
-					<button onclick="pre()">&lt</button>
-					<button onclick="next()">&gt</button>
+					<button onclick="display()">Go</button>
 				</td>
 			</tr>
 		</table>
+		
+		<!-- year 2018 -->
+		<div id="div_2018" style="display:none;">
+			<table width="800">
+				<!-- WCCI2018 -->
+				<!-- deliberately leave some blanks -->
+				<tr><td><br /></td></tr>
+				<tr>
+					<td>
+						<b>2018 World Congress on Computational Intelligence</b>
+						<ul type="circle">
+							<li>Rio de Janeiro &#8729; Windsor Oceanico</li>
+							<li>Barra da Tijuca</li>
+							<li>Sugar Loaf</li>
+							<li>Corcovado</li>
+							<li>Escadaria Selaron</li>
+						</ul>
+					</td>
+					<td>
+						<img src="wcci2018_0.jpg" id="img_wcci2018" title="wcci2018" width="400" />
+						<br />
+						<button id="wcci2018_previous"> &lt </button>
+						<button id="wcci2018_next"> &gt </button>
+					</td>
+				</tr>
+				
+				<!-- ICPR2018 -->
+				<!-- deliberately leave some blanks -->
+				<tr><td><br /></td></tr>
+				<tr>
+					<td>
+						<b>2018 International Conference on Pattern Recognition</b>
+						<ul type="circle">
+							<li>Beijing &#8729; China National Convention Center</li>
+							<li>Olympic Park &#8729; Bird's Nest &#8729; Water Cube</li>
+							<li>Summer Palace</li>
+						</ul>
+					</td>
+					<td>
+						<img src="icpr2018_0.jpg" id="img_icpr2018" title="icpr2018" width="400" />
+						<br />
+						<button id="icpr2018_previous"> &lt </button>
+						<button id="icpr2018_next"> &gt </button>
+					</td>
+				</tr>
+
+				<!-- DSP2018 -->
+				<!-- deliberately leave some blanks -->
+				<tr><td><br /></td></tr>
+				<tr>
+					<td>
+						<b>2018 International Conference on Digital Signal Processing</b>
+						<ul type="circle">
+							<li>Shanghai &#8729; ShanghaiTech University</li>
+							<li>Huangpu River</li>
+							<li>The Oriental Pearl Radio &amp; TV Tower</li>
+						</ul>
+					</td>
+					<td>
+						<img src="dsp2018_0.jpg" id="img_dsp2018" title="dsp2018" width="400" />
+						<br />
+						<button id="dsp2018_previous"> &lt </button>
+						<button id="dsp2018_next"> &gt </button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- year 2019 -->
+		<div id="div_2019" style="display:none;">
+			Oops!
+		</div>
+		
+		<!-- year 2020 -->
+		<div id="div_2020" style="display:none;">
+			Oops again!
+		</div>
+
+		<script src="script.js"></script>
 	</body>
 </html>
