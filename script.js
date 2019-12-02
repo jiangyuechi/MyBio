@@ -19,7 +19,7 @@ function image_object (name,quantity,current_index){
 display();
 
 var image_set=new Array();//this is a global variable
-image_set[0]=new image_object("wcci2018",5,0);
+image_set[0]=new image_object("wcci2018",8,0);
 image_set[1]=new image_object("icpr2018",8,0);
 image_set[2]=new image_object("dsp2018",3,0);
 
