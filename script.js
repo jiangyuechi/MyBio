@@ -1,4 +1,11 @@
 //function definition
+function displayPage(page_name){
+	var page_name_list=["my_self","my_publication","my_trace"];
+	for (var i=0;i<page_name_list.length;i++){
+		document.getElementById(page_name_list[i]).style.display="none";
+	}
+	document.getElementById(page_name).style.display="block";
+}
 function display(){//only the selected year is visible
 	//document.getElementById("year2018").innerHTML="Oops!";
 	var year=document.getElementById("select_year").value;

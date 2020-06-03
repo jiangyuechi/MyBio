@@ -3,100 +3,141 @@
 		<title>My Bio</title>
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<h1>Yuechi Jiang</h1>
+		<hr/>
 		<table>
 			<tr>
-				<td>Year</td>
-				<td>
-					<select name="year" id="select_year">
-						<option value="2018" selected>2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
-					</select>
-				</td>
-				<td>
-					<button onclick="display()">Go</button>
-				</td>
+				<td onclick="displayPage('my_self')"><b>My Self</b></td>
+				<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+				<td onclick="displayPage('my_publication')"><b>My Publication</b></td>
+				<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+				<td onclick="displayPage('my_code')"><b>My Code</b></td>
+				<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+				<td onclick="displayPage('my_trace')"><b>My Trace</b></td>
+				<td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
 			</tr>
 		</table>
+		<hr/>
 		
-		<!-- year 2018 -->
-		<div id="div_2018" style="display:none;">
-			<table width="800">
-				<!-- WCCI2018 -->
-				<!-- deliberately leave some blanks -->
-				<tr><td><br /></td></tr>
+		<!-- my self -->
+		<div id="my_self" style="display:block;">
+			<p>
+				Hello World
+			</p>
+		</div>
+		
+		<!-- my publication -->
+		<div id="my_publication" style="display:none;">
+			<p>ICPR2018: Generalized Fisher LDA and KDA
+				<a href="https://ieeexplore.ieee.org/abstract/document/8545659" target="_blank">paper</a>
+				<a>code</a>
+			</p>
+			<p>IJCNN2018: Scalable Probabilistic LDA
+				<a href="https://ieeexplore.ieee.org/abstract/document/8488995/" target="_blank">paper</a>
+				<a>code</a>
+			<p>
+		</div>
+		
+		<!-- my code -->
+		<div id="my_code" style="display:none;">
+		</div>
+		
+		<!-- my trace -->
+		<div id="my_trace" style="display:none;">
+			<table>
 				<tr>
+					<td>Year</td>
 					<td>
-						<b>2018 World Congress on Computational Intelligence</b>
-						<ul type="circle">
-							<li>Rio de Janeiro &#8729; Windsor Oceanico</li>
-							<li>Barra da Tijuca</li>
-							<li>Sugar Loaf</li>
-							<li>Corcovado</li>
-							<li>Escadaria Selaron</li>
-						</ul>
+						<select name="year" id="select_year">
+							<option value="2018" selected>2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+						</select>
 					</td>
 					<td>
-						<img src="wcci2018_0.jpg" id="img_wcci2018" title="wcci2018" width="400" />
-						<br />
-						<button id="wcci2018_previous"> &lt </button>
-						<button id="wcci2018_next"> &gt </button>
-					</td>
-				</tr>
-				
-				<!-- ICPR2018 -->
-				<!-- deliberately leave some blanks -->
-				<tr><td><br /></td></tr>
-				<tr>
-					<td>
-						<b>2018 International Conference on Pattern Recognition</b>
-						<ul type="circle">
-							<li>Beijing &#8729; China National Convention Center</li>
-							<li>Olympic Park &#8729; Bird's Nest &#8729; Water Cube</li>
-							<li>Summer Palace</li>
-						</ul>
-					</td>
-					<td>
-						<img src="icpr2018_0.jpg" id="img_icpr2018" title="icpr2018" width="400" />
-						<br />
-						<button id="icpr2018_previous"> &lt </button>
-						<button id="icpr2018_next"> &gt </button>
-					</td>
-				</tr>
-
-				<!-- DSP2018 -->
-				<!-- deliberately leave some blanks -->
-				<tr><td><br /></td></tr>
-				<tr>
-					<td>
-						<b>2018 International Conference on Digital Signal Processing</b>
-						<ul type="circle">
-							<li>Shanghai &#8729; ShanghaiTech University</li>
-							<li>Huangpu River</li>
-							<li>The Oriental Pearl Radio &amp; TV Tower</li>
-						</ul>
-					</td>
-					<td>
-						<img src="dsp2018_0.jpg" id="img_dsp2018" title="dsp2018" width="400" />
-						<br />
-						<button id="dsp2018_previous"> &lt </button>
-						<button id="dsp2018_next"> &gt </button>
+						<button onclick="display()">Go</button>
 					</td>
 				</tr>
 			</table>
-		</div>
 		
-		<!-- year 2019 -->
-		<div id="div_2019" style="display:none;">
-			Oops!
-		</div>
-		
-		<!-- year 2020 -->
-		<div id="div_2020" style="display:none;">
-			Oops again!
-		</div>
+			<!-- year 2018 -->
+			<div id="div_2018" style="display:none;">
+				<table width="800">
+					<!-- WCCI2018 -->
+					<!-- deliberately leave some blanks -->
+					<tr><td><br /></td></tr>
+					<tr>
+						<td>
+							<b>2018 World Congress on Computational Intelligence</b>
+							<ul type="circle">
+								<li>Rio de Janeiro &#8729; Windsor Oceanico</li>
+								<li>Barra da Tijuca</li>
+								<li>Sugar Loaf</li>
+								<li>Corcovado</li>
+								<li>Escadaria Selaron</li>
+							</ul>
+						</td>
+						<td>
+							<img src="wcci2018_0.jpg" id="img_wcci2018" title="wcci2018" width="400" />
+							<br />
+							<button id="wcci2018_previous"> &lt </button>
+							<button id="wcci2018_next"> &gt </button>
+						</td>
+					</tr>
+				
+					<!-- ICPR2018 -->
+					<!-- deliberately leave some blanks -->
+					<tr><td><br /></td></tr>
+					<tr>
+						<td>
+							<b>2018 International Conference on Pattern Recognition</b>
+							<ul type="circle">
+								<li>Beijing &#8729; China National Convention Center</li>
+								<li>Olympic Park &#8729; Bird's Nest &#8729; Water Cube</li>
+								<li>Summer Palace</li>
+							</ul>
+						</td>
+						<td>
+							<img src="icpr2018_0.jpg" id="img_icpr2018" title="icpr2018" width="400" />
+							<br />
+							<button id="icpr2018_previous"> &lt </button>
+							<button id="icpr2018_next"> &gt </button>
+						</td>
+					</tr>
 
+					<!-- DSP2018 -->
+					<!-- deliberately leave some blanks -->
+					<tr><td><br /></td></tr>
+					<tr>
+						<td>
+							<b>2018 International Conference on Digital Signal Processing</b>
+							<ul type="circle">
+								<li>Shanghai &#8729; ShanghaiTech University</li>
+								<li>Huangpu River</li>
+								<li>The Oriental Pearl Radio &amp; TV Tower</li>
+							</ul>
+						</td>
+						<td>
+							<img src="dsp2018_0.jpg" id="img_dsp2018" title="dsp2018" width="400" />
+							<br />
+							<button id="dsp2018_previous"> &lt </button>
+							<button id="dsp2018_next"> &gt </button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		
+			<!-- year 2019 -->
+			<div id="div_2019" style="display:none;">
+				Oops!
+			</div>
+		
+			<!-- year 2020 -->
+			<div id="div_2020" style="display:none;">
+				Oops again!
+			</div>
+		
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
